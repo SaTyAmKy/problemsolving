@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background-image: repeating-radial-gradient(lightyellow,burlywood ,yellow);
+        }
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+        }
+        .login-box{
+            background-color: bisque;
+            width:250px;
+            border-radius: 5px;
+            padding:20px;
+            
+        }
+        .login-box > h3{
+            text-align: center;
+            font-size: 1.7em;
+            margin-bottom: 20px;
+        }
+        .login-box .input-box{
+            background-color: transparent;
+            margin-bottom: 10px;
+            height:30px;
+            width:210px;
+            position:relative;
+        }
+        .login-box .input-box label{
+            position:absolute;
+            top:5px;
+            left:10px 
+        }
+        .login-box .input-box input{
+            width:100%;
+            height:100%;
+            border: none;
+            padding:10px;
+            background-color: transparent;
+            border-bottom:2px solid black
+        }
+        .login-box .input-box input:focus{
+            outline:none;
+        }
+        .login-box .input-box input:focus + label{
+            top:-10px;
+            transition: 0.3s;
+        }
+        .login-box .register-forget{
+            display:flex;
+            justify-content: space-between;
+        }
+        .login-box button{
+            width:100%;
+            padding:3px;
+            margin-top: 15px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h3>Login</h3>
+        <div class="input-box">
+            <input type="text" id="username" required />
+            <i class="fa-solid fa-user"></i>
+             <label for="username">Username</label>
+        </div>
+         <div class="input-box"> 
+            <input type="text" id="password" required />
+            <i class="fa-solid fa-lock"></i>
+             <label for="password">password</label>
+        </div>
+        <div class="register-forget">
+            <a href="#">Register</a>
+            <a href="#">Forget password</a>
+        </div>
+        <button type="submit">Login</button>
+        <button type="reset">Reset</button>
+    </div>
+    
+</body>
+</html>
